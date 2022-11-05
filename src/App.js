@@ -1,12 +1,26 @@
+import { click } from '@testing-library/user-event/dist/click';
+import { useState } from 'react';
 import './App.css';
 import shoe1 from'./assets/shoe1.jpg'
 import shoe2 from'./assets/shoe2.jpg'
 
 function App() {
 
-  const [overlay, setoverlay] = useState(false);
+  // overlay 
+  const [paymentMethod, setpaymentMethod] = useState(0);
 
-  
+  // on click on buy button 
+  const buyButton = () => {
+    document.getElementById("overlay").style.display = "block";
+
+  }
+
+  const closeOverlay = () => {
+    document.getElementById("overlay").style.display = "none";
+  }
+
+
+
   return (
     <div className="App">
 
@@ -50,14 +64,25 @@ function App() {
           </div>
           
           {/* Payment button  */}
-          <button onclick={() => buyButton()} className='mt-10 w-full border pt-4 pb-4 rounded-full bg-black text-white hover:scale-105 transition ease-in-out delay-75 font-bold'>Buy</button>
+          <button onClick={() => buyButton()} className='mt-10 w-full border pt-4 pb-4 rounded-full bg-black text-white hover:scale-105 transition ease-in-out delay-75 font-bold'>Buy</button>
        
         </section>
 
 
       {/* Overlays */}
-      <section id="overlay" onclick="off()">
-        <div id="text">Overlay Text</div>
+      <section id="overlay" className=''>
+        <div id="box" className='transition ease-in-out delay-150 rounded-xl p-7 pb-9'>
+          
+          {/* Options */}
+          <div className=''>
+            Select a payment option <span className='float-right' onClick={() => closeOverlay()}>X</span>
+            <div className='mt-6 pl-5 border rounded pt-3 pb-3 hover:transition ease-in-out delay-150 hover:border-blue-500'> <i className="fa fa-credit-card mr-5"></i> Pay with card</div>
+            <div className='mt-4 pl-5 border rounded pt-3 pb-3 hover:transition ease-in-out delay-150 hover:border-blue-500'> <i className="fa fa-bank mr-5"></i> Pay with Bank Direct</div>
+          </div>
+
+          <p className='text-sm text-gray-400 text-center mt-10'>Powered by QeLoop</p>
+
+        </div>
       </section>
 
       </main>
