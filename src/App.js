@@ -1,5 +1,6 @@
 import './App.css';
-import shoe from'./assets/shoe.jpg'
+import shoe1 from'./assets/shoe1.jpg'
+import shoe2 from'./assets/shoe2.jpg'
 
 function App() {
   return (
@@ -21,8 +22,9 @@ function App() {
       <main className='grid grid-cols-3 gap-4'>
 
         {/* Left side  */}
-        <section className="left-side col-span-2">
-          <img src={shoe} />
+        <section className="left-side col-span-2 grid grid-cols-2 gap-4">
+          <img src={shoe1}/>
+          <img src={shoe2}/>
         </section>
 
         {/* Right side  */}
