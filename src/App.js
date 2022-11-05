@@ -37,7 +37,7 @@ function App() {
           <div className="grid grid-cols-4 gap-4 mt-10 place-content-center cursor-pointer">
             <div className='text-center border rounded pt-2 pb-2 hover:transition ease-in-out delay-150 hover:border-green-500'>UK 2.5</div>
             <div className='text-center border rounded pt-2 pb-2 hover:transition ease-in-out delay-150 hover:border-green-500'>UK 3</div>
-            <div className='text-center border rounded pt-2 pb-2 bg-green-500 text-white'>UK 3.5</div>
+            <div className='text-center border rounded pt-2 pb-2 bg-black text-white'>UK 3.5</div>
             <div className='text-center border rounded pt-2 pb-2 hover:transition ease-in-out delay-150 hover:border-green-500'>UK 4</div>
             <div className='text-center border rounded pt-2 pb-2 hover:transition ease-in-out delay-150 hover:border-green-500'>UK 4.5</div>
             <div className='text-center border rounded pt-2 pb-2 hover:transition ease-in-out delay-150 hover:border-green-500'>UK 5</div>
