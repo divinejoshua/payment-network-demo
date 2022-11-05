@@ -113,7 +113,7 @@ function App() {
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold text-gray-700 text-sm font-bold mb-2">
                           Exp Date
                         </label>
-                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="month" placeholder="" value="2023-05"/>
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="month" placeholder="" defaultValue="2023-05"/>
                       </div>
 
                       {/* CVV  */}
