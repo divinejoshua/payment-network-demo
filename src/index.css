@@ -33,8 +33,11 @@ body {
   left: 50%;
   width: 100%;
   max-width: 500px;
-  background-color: white;
+  padding: 20px;
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
 }
 
+.overlay-container{
+  background-color: white;
+}

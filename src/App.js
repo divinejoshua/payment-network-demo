@@ -74,97 +74,57 @@ function App() {
 
       {/* Overlays */}
       <section id="overlay" className=''>
-        <div id="box" className='transition ease-in-out delay-150 rounded-xl p-7 pb-9'>
-          
-          {/* Options */}
-          { paymentMethod == 0 &&<div className=''>
-            Select a payment option <span className='float-right' onClick={() => closeOverlay()}>X</span>
-            <div onClick={() => setpaymentMethod(1)} className='mt-6 pl-5 border rounded pt-3 pb-3 hover:transition ease-in-out delay-150 hover:border-blue-500'> <i className="fa fa-credit-card mr-5"></i> Pay with card</div>
-            <div onClick={() => setpaymentMethod(2)} className='mt-4 pl-5 border rounded pt-3 pb-3 hover:transition ease-in-out delay-150 hover:border-blue-500'> <i className="fa fa-mobile-phone mr-5 text-xl"></i> Pay with Mobile bank</div>
-          </div>
-          }
-
-          {/* If paymentMethod is card  */}
-        { paymentMethod == 1 &&<div className=''>
-        <i className="fa fa-credit-card mr-5"></i> Pay with card <span className='float-right hover:underline' onClick={() => setpaymentMethod(0)}>Go back</span>
-
-          <div className="card-form grid grid-cols-2 gap-4 pt-7 ">
-
-                  {/* Fullname */}
-                  <div className="mb-4 col-span-2">
-                    <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold text-gray-700 text-sm font-bold mb-2">
-                      Fullname
-                    </label>
-                    <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Name on card"/>
-                  </div>
-
-                {/* Card number */}
-                  <div className="mb-4 col-span-2">
-                    <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold text-gray-700 text-sm font-bold mb-2">
-                      Card number
-                    </label>
-                    <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="number" placeholder="0000 0000 0000 0000"/>
-                  </div>
-
-
-                {/* Exp date  */}
-                  <div className="">
-                    <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold text-gray-700 text-sm font-bold mb-2">
-                      Exp Date
-                    </label>
-                    <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="month" placeholder=""/>
-                  </div>
-
-                  {/* CVV  */}
-                  <div className="">
-                    <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold text-gray-700 text-sm font-bold mb-2">
-                      CVV
-                    </label>
-                    <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="number" placeholder="XXX"/>
-                  </div>
-
-                <button onClick={() => closeOverlay()} className='mt-5 col-span-2 w-full border pt-3 pb-3 rounded-full bg-black text-white hover:scale-105 transition ease-in-out delay-75 font-bold'>
-                  Pay &nbsp;£119.96
-                </button>
-                
-
-              </div>
-
+        <div id="box" className='transition ease-in-out delay-150 '>
+          <div className='overlay-container rounded-xl p-7 pb-9'>
               
-          </div>
-          }
+              {/* Options */}
+              { paymentMethod == 0 &&<div className=''>
+                Select a payment option <span className='float-right' onClick={() => closeOverlay()}>X</span>
+                <div onClick={() => setpaymentMethod(1)} className='mt-6 pl-5 border rounded pt-3 pb-3 hover:transition ease-in-out delay-150 hover:border-blue-500'> <i className="fa fa-credit-card mr-5"></i> Pay with card</div>
+                <div onClick={() => setpaymentMethod(2)} className='mt-4 pl-5 border rounded pt-3 pb-3 hover:transition ease-in-out delay-150 hover:border-blue-500'> <i className="fa fa-mobile-phone mr-5 text-xl"></i> Pay with Mobile bank</div>
+              </div>
+              }
 
-
-           {/* If paymentMethod is Mobile bank network  */}
-        { paymentMethod == 2 &&
-            <div className=''>
-
-              <i className="fa fa-mobile-phone text-xl mr-5"></i> Pay with Mobile bank <span className='float-right hover:underline' onClick={() => setpaymentMethod(0)}>Go back</span>
+              {/* If paymentMethod is card  */}
+            { paymentMethod == 1 &&<div className=''>
+            <i className="fa fa-credit-card mr-5"></i> Pay with card <span className='float-right hover:underline' onClick={() => setpaymentMethod(0)}>Go back</span>
 
               <div className="card-form grid grid-cols-2 gap-4 pt-7 ">
 
                       {/* Fullname */}
                       <div className="mb-4 col-span-2">
-                        <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
-                          Bank Name
+                        <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold text-gray-700 text-sm font-bold mb-2">
+                          Fullname
                         </label>
-                        <div className="relative">
-                          <select className="block appearance-none w-full border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
-                            <option>-Select bank name</option>
-                            <option>Kuda Bank</option>
-                            <option>Monzo Bank</option>
-                            <option>Revolut Bank</option>
-                            <option>Wema Bank</option>
-                            <option>UBA Bank</option>
-                            <option>Zenith Bank</option>
-                          </select>
-                          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                            <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-                          </div>
-                        </div> 
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Name on card"/>
                       </div>
 
-                    <button onClick={() => closeOverlay()} className='col-span-2 w-full border pt-3 pb-3 rounded-full bg-black text-white hover:scale-105 transition ease-in-out delay-75 font-bold'>
+                    {/* Card number */}
+                      <div className="mb-4 col-span-2">
+                        <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold text-gray-700 text-sm font-bold mb-2">
+                          Card number
+                        </label>
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="number" placeholder="0000 0000 0000 0000"/>
+                      </div>
+
+
+                    {/* Exp date  */}
+                      <div className="">
+                        <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold text-gray-700 text-sm font-bold mb-2">
+                          Exp Date
+                        </label>
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="month" placeholder=""/>
+                      </div>
+
+                      {/* CVV  */}
+                      <div className="">
+                        <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold text-gray-700 text-sm font-bold mb-2">
+                          CVV
+                        </label>
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="number" placeholder="XXX"/>
+                      </div>
+
+                    <button onClick={() => closeOverlay()} className='mt-5 col-span-2 w-full border pt-3 pb-3 rounded-full bg-black text-white hover:scale-105 transition ease-in-out delay-75 font-bold'>
                       Pay &nbsp;£119.96
                     </button>
                     
@@ -172,16 +132,59 @@ function App() {
                   </div>
 
                   
-
-            </div>
-          
-          
-          }
+              </div>
+              }
 
 
+              {/* If paymentMethod is Mobile bank network  */}
+            { paymentMethod == 2 &&
+                <div className=''>
 
-          <p className='text-sm text-gray-400 text-center mt-10'>Powered by QeLoop</p>
+                  <i className="fa fa-mobile-phone text-xl mr-5"></i> Pay with Mobile bank <span className='float-right hover:underline' onClick={() => setpaymentMethod(0)}>Go back</span>
 
+                  <div className="card-form grid grid-cols-2 gap-4 pt-7 ">
+
+                          {/* Fullname */}
+                          <div className="mb-4 col-span-2">
+                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                              Bank Name
+                            </label>
+                            <div className="relative">
+                              <select className="block appearance-none w-full border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                                <option>-Select bank name</option>
+                                <option>Kuda Bank</option>
+                                <option>Monzo Bank</option>
+                                <option>Revolut Bank</option>
+                                <option>Wema Bank</option>
+                                <option>UBA Bank</option>
+                                <option>Zenith Bank</option>
+                              </select>
+                              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                              </div>
+                            </div> 
+                          </div>
+
+                        <button onClick={() => closeOverlay()} className='col-span-2 w-full border pt-3 pb-3 rounded-full bg-black text-white hover:scale-105 transition ease-in-out delay-75 font-bold'>
+                          Pay &nbsp;£119.96
+                        </button>
+                        
+
+                      </div>
+
+                      
+
+                </div>
+              
+              
+              }
+
+
+
+              <p className='text-sm text-gray-400 text-center mt-10'>Powered by QeLoop</p>
+
+
+          </div>
         </div>
       </section>
 
