@@ -15,9 +15,12 @@ function App() {
 
   }
 
+  // Close overlay 
   const closeOverlay = () => {
     document.getElementById("overlay").style.display = "none";
+    setpaymentMethod(0)
   }
+
 
 
 
@@ -74,11 +77,64 @@ function App() {
         <div id="box" className='transition ease-in-out delay-150 rounded-xl p-7 pb-9'>
           
           {/* Options */}
-          <div className=''>
+          { paymentMethod == 0 &&<div className=''>
             Select a payment option <span className='float-right' onClick={() => closeOverlay()}>X</span>
-            <div className='mt-6 pl-5 border rounded pt-3 pb-3 hover:transition ease-in-out delay-150 hover:border-blue-500'> <i className="fa fa-credit-card mr-5"></i> Pay with card</div>
-            <div className='mt-4 pl-5 border rounded pt-3 pb-3 hover:transition ease-in-out delay-150 hover:border-blue-500'> <i className="fa fa-bank mr-5"></i> Pay with Bank Direct</div>
+            <div onClick={() => setpaymentMethod(1)} className='mt-6 pl-5 border rounded pt-3 pb-3 hover:transition ease-in-out delay-150 hover:border-blue-500'> <i className="fa fa-credit-card mr-5"></i> Pay with card</div>
+            <div onClick={() => setpaymentMethod(2)} className='mt-4 pl-5 border rounded pt-3 pb-3 hover:transition ease-in-out delay-150 hover:border-blue-500'> <i className="fa fa-bank mr-5"></i> Pay with Bank Direct</div>
           </div>
+          }
+
+          {/* If paymentMethod is card  */}
+        { paymentMethod == 1 &&<div className=''>
+        <i className="fa fa-credit-card mr-5"></i> Pay with card <span className='float-right hover:underline' onClick={() => setpaymentMethod(0)}>Go back</span>
+
+          <div className="card-form grid grid-cols-2 gap-4 pt-7 ">
+
+                  {/* Fullname */}
+                  <div className="mb-4 col-span-2">
+                    <label className="block text-gray-700 text-sm font-bold mb-2">
+                      Fullname
+                    </label>
+                    <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Name on card"/>
+                  </div>
+
+                {/* Card number */}
+                  <div className="mb-4 col-span-2">
+                    <label className="block text-gray-700 text-sm font-bold mb-2">
+                      Card number
+                    </label>
+                    <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="number" placeholder="0000 0000 0000 0000"/>
+                  </div>
+
+
+                {/* Exp date  */}
+                  <div className="">
+                    <label className="block text-gray-700 text-sm font-bold mb-2">
+                      Exp Date
+                    </label>
+                    <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="month" placeholder=""/>
+                  </div>
+
+                  {/* CVV  */}
+                  <div className="">
+                    <label className="block text-gray-700 text-sm font-bold mb-2">
+                      CVV
+                    </label>
+                    <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="number" placeholder="XXX"/>
+                  </div>
+
+                <button onClick={() => closeOverlay()} className='mt-5 col-span-2 w-full border pt-3 pb-3 rounded-full bg-black text-white hover:scale-105 transition ease-in-out delay-75 font-bold'>
+                  Pay &nbsp;£119.96
+                </button>
+                
+
+              </div>
+
+              
+          </div>
+          }
+
+
 
           <p className='text-sm text-gray-400 text-center mt-10'>Powered by QeLoop</p>
 
