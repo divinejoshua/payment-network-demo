@@ -10,11 +10,11 @@ function App() {
       <header className="App-header grid grid-cols-3 gap-8 pt-8 pb-5 container mx-auto mb-5 border-b border-gray-100">
       <h1 className='font-bold col-span-2'>Fancy Shoes</h1>
 
-        <ul className='flex right-0'>
-          <li>Men</li>
-          <li>Women</li>
-          <li>Kids</li>
-          <li>Sales</li>
+        <ul className='flex cursor-pointer'>
+          <li className='pr-4 hover:transition ease-in-out delay-150 hover:text-green-500'>Men</li>
+          <li className='pr-4 hover:transition ease-in-out delay-150 hover:text-green-500'>Women</li>
+          <li className='pr-4 hover:transition ease-in-out delay-150 hover:text-green-500'>Kids</li>
+          <li className='pr-4 hover:transition ease-in-out delay-150 hover:text-green-500'>Sales</li>
         </ul>
       </header>
 
@@ -22,7 +22,7 @@ function App() {
       <main className='md:grid md:grid-cols-3 md:gap-8 container mx-auto mt-8'>
 
         {/* Left side  */}
-        <section className="left-side col-span-2 grid grid-cols-2 gap-4">
+        <section className="left-side col-span-2 grid grid-cols-2 gap-6">
           <img src={shoe1} className="hover:scale-105 transition ease-in-out delay-150 rounded"/>
           <img src={shoe2} className="hover:scale-105 transition ease-in-out delay-150 rounded"/>
         </section>
@@ -34,19 +34,19 @@ function App() {
           £119.96
 
           {/* Sizes  */}
-          <div className="grid grid-cols-4 gap-4 mt-10">
-            <div>UK 2.5</div>
-            <div>UK 3</div>
-            <div>UK 3.5</div>
-            <div>UK 4</div>
-            <div>UK 4.5</div>
-            <div>UK 5</div>
-            <div>UK 5.5</div>
-            <div>UK 6</div>
+          <div className="grid grid-cols-4 gap-4 mt-10 place-content-center cursor-pointer">
+            <div className='text-center border rounded pt-2 pb-2 hover:transition ease-in-out delay-150 hover:border-green-500'>UK 2.5</div>
+            <div className='text-center border rounded pt-2 pb-2 hover:transition ease-in-out delay-150 hover:border-green-500'>UK 3</div>
+            <div className='text-center border rounded pt-2 pb-2 bg-green-500 text-white'>UK 3.5</div>
+            <div className='text-center border rounded pt-2 pb-2 hover:transition ease-in-out delay-150 hover:border-green-500'>UK 4</div>
+            <div className='text-center border rounded pt-2 pb-2 hover:transition ease-in-out delay-150 hover:border-green-500'>UK 4.5</div>
+            <div className='text-center border rounded pt-2 pb-2 hover:transition ease-in-out delay-150 hover:border-green-500'>UK 5</div>
+            <div className='text-center border rounded pt-2 pb-2 hover:transition ease-in-out delay-150 hover:border-green-500'>UK 5.5</div>
+            <div className='text-center border rounded pt-2 pb-2 hover:transition ease-in-out delay-150 hover:border-green-500'>UK 6</div>
           </div>
           
 
-          <button className='mt-10'>Buy</button>
+          <button className='mt-10 w-full border pt-4 pb-4 rounded-full bg-black text-white'>Buy</button>
         </section>
 
 
