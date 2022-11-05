@@ -25,7 +25,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="App mb-20">
 
       {/* Header  */}
       <header className="App-header grid grid-cols-3 gap-8 pt-8 pb-5 container mx-auto mb-5 border-b border-gray-100  pl-5 pr-5">
