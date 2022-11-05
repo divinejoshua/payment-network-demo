@@ -7,10 +7,10 @@ function App() {
     <div className="App">
 
       {/* Header  */}
-      <header className="App-header">
-      Fancy Shoes
+      <header className="App-header grid grid-cols-3 gap-4 pt-8 pb-5 container mx-auto mb-5 border-b border-gray-100">
+      <h1 className='font-bold col-span-2'>Fancy Shoes</h1>
 
-        <ul>
+        <ul className='flex right-0'>
           <li>Men</li>
           <li>Women</li>
           <li>Kids</li>
@@ -19,7 +19,7 @@ function App() {
       </header>
 
     {/* Main body  */}
-      <main className='grid grid-cols-3 gap-4'>
+      <main className='md:grid md:grid-cols-3 md:gap-4 container mx-auto mt-8'>
 
         {/* Left side  */}
         <section className="left-side col-span-2 grid grid-cols-2 gap-4">
@@ -29,12 +29,12 @@ function App() {
 
         {/* Right side  */}
         <section className="right-side">
-          <h1>Nike Air Zoom Pegasus 39 Shield</h1>
-          <p>Women's Weatherised Road Running Shoes</p>
+          <h1 className='text-2xl font-bold mb-4'>Nike Air Zoom Pegasus 39 Shield</h1>
+          <p className='mb-4'>Women's Weatherised Road Running Shoes</p>
           £119.96
 
           {/* Sizes  */}
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid grid-cols-4 gap-4 mt-10">
             <div>UK 2.5</div>
             <div>UK 3</div>
             <div>UK 3.5</div>
@@ -46,7 +46,7 @@ function App() {
           </div>
           
 
-          <button>Buy</button>
+          <button className='mt-10'>Buy</button>
         </section>
 
 
