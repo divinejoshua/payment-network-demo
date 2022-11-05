@@ -7,10 +7,10 @@ function App() {
     <div className="App">
 
       {/* Header  */}
-      <header className="App-header grid grid-cols-3 gap-8 pt-8 pb-5 container mx-auto mb-5 border-b border-gray-100">
+      <header className="App-header grid grid-cols-3 gap-8 pt-8 pb-5 container mx-auto mb-5 border-b border-gray-100  pl-5 pr-5">
       <h1 className='font-bold col-span-2'>Fancy Shoes</h1>
 
-        <ul className='flex cursor-pointer'>
+        <ul className='flex cursor-pointer hidden sm:flex'>
           <li className='pr-4 hover:transition ease-in-out delay-150 hover:text-green-500'>Men</li>
           <li className='pr-4 hover:transition ease-in-out delay-150 hover:text-green-500'>Women</li>
           <li className='pr-4 hover:transition ease-in-out delay-150 hover:text-green-500'>Kids</li>
@@ -19,7 +19,7 @@ function App() {
       </header>
 
     {/* Main body  */}
-      <main className='md:grid md:grid-cols-3 md:gap-8 container mx-auto mt-8'>
+      <main className='md:grid md:grid-cols-3 md:gap-8 container mx-auto mt-8  pl-5 pr-5'>
 
         {/* Left side  */}
         <section className="left-side col-span-2 grid grid-cols-2 gap-6">
@@ -34,7 +34,7 @@ function App() {
           £119.96
 
           {/* Sizes  */}
-          <div className="grid grid-cols-4 gap-4 mt-10 place-content-center cursor-pointer">
+          <div className="grid grid-cols-3 lg:grid-cols-4 gap-4 mt-10 place-content-center cursor-pointer">
             <div className='text-center border rounded pt-2 pb-2 hover:transition ease-in-out delay-150 hover:border-green-500'>UK 2.5</div>
             <div className='text-center border rounded pt-2 pb-2 hover:transition ease-in-out delay-150 hover:border-green-500'>UK 3</div>
             <div className='text-center border rounded pt-2 pb-2 bg-black text-white'>UK 3.5</div>
