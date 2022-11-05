@@ -113,7 +113,7 @@ function App() {
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold text-gray-700 text-sm font-bold mb-2">
                           Exp Date
                         </label>
-                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="month" placeholder=""/>
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="month" placeholder="" value="2018-05"/>
                       </div>
 
                       {/* CVV  */}
@@ -121,7 +121,7 @@ function App() {
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold text-gray-700 text-sm font-bold mb-2">
                           CVV
                         </label>
-                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="number" placeholder="XXX"/>
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="number" placeholder="XXX"/>
                       </div>
 
                     <button onClick={() => closeOverlay()} className='mt-5 col-span-2 w-full border pt-3 pb-3 rounded-full bg-black text-white hover:scale-105 transition ease-in-out delay-75 font-bold'>
