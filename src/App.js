@@ -3,6 +3,8 @@ import shoe1 from'./assets/shoe1.jpg'
 import shoe2 from'./assets/shoe2.jpg'
 
 function App() {
+
+  const [overlay, setoverlay] = useState(initialState);
   return (
     <div className="App">
 
@@ -46,7 +48,7 @@ function App() {
           </div>
           
           {/* Payment button  */}
-          <button className='mt-10 w-full border pt-4 pb-4 rounded-full bg-black text-white hover:scale-105 transition ease-in-out delay-75 font-bold'>Buy</button>
+          <button onclick={() => buyButton()} className='mt-10 w-full border pt-4 pb-4 rounded-full bg-black text-white hover:scale-105 transition ease-in-out delay-75 font-bold'>Buy</button>
        
         </section>
 
