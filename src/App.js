@@ -4,7 +4,9 @@ import shoe2 from'./assets/shoe2.jpg'
 
 function App() {
 
-  const [overlay, setoverlay] = useState(initialState);
+  const [overlay, setoverlay] = useState(false);
+
+  
   return (
     <div className="App">
 
