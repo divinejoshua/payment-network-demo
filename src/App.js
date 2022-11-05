@@ -46,7 +46,7 @@ function App() {
           </div>
           
 
-          <button className='mt-10 w-full border pt-4 pb-4 rounded-full bg-black text-white'>Buy</button>
+          <button className='mt-10 w-full border pt-4 pb-4 rounded-full bg-black text-white hover:scale-105 transition ease-in-out delay-75 font-bold'>Buy</button>
         </section>
 
 
