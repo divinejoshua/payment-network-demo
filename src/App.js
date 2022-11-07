@@ -84,7 +84,9 @@ function App() {
             Fancy Shoe payment <span className='float-right hover:underline' onClick={() => closeOverlay()}>X</span>
 
           {/* Mobile Bank Button  */}
-            <button onClick={() => setpaymentMethod(2)} className='w-full mt-10 mb-5 pl-5 border rounded pt-3 pb-3 hover:transition ease-in-out delay-150 hover:border-blue-500'> <i className="fa fa-mobile-phone mr-5 text-xl"></i> Continue with Mobile bank</button>
+            <button onClick={() => setpaymentMethod(2)} className='w-full mt-10 mb-5 pl-5 border rounded pt-3 pb-3 hover:transition ease-in-out delay-150 hover:border-blue-500'>
+               <i className="fa fa-sign-in mr-3 text-xl text-gray-500"></i> Continue with Mobile bank
+            </button>
 
           {/* OR  */}
             <div className='or-div'>
