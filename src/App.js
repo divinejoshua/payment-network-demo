@@ -87,7 +87,10 @@ function App() {
 
               {/* If paymentMethod is card  */}
             { paymentMethod == 1 &&<div className=''>
-            <i className="fa fa-credit-card mr-5"></i> Pay with card <span className='float-right hover:underline' onClick={() => setpaymentMethod(0)}>Go back</span>
+            Fancy Shoe payment <span className='float-right hover:underline' onClick={() => setpaymentMethod(0)}>Go back</span>
+
+            <div onClick={() => setpaymentMethod(2)} className='mt-10 mb-5 pl-5 border rounded pt-3 pb-3 hover:transition ease-in-out delay-150 hover:border-blue-500'> <i className="fa fa-mobile-phone mr-5 text-xl"></i> Pay with Mobile bank</div>
+
 
               <div className="card-form grid grid-cols-2 gap-4 pt-7 ">
 
