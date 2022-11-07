@@ -7,7 +7,7 @@ import shoe2 from'./assets/shoe2.jpg'
 function App() {
 
   // overlay 
-  const [paymentMethod, setpaymentMethod] = useState(0);
+  const [paymentMethod, setpaymentMethod] = useState(1);
 
   // on click on buy button 
   const buyButton = () => {
@@ -18,7 +18,7 @@ function App() {
   // Close overlay 
   const closeOverlay = () => {
     document.getElementById("overlay").style.display = "none";
-    setpaymentMethod(0)
+    setpaymentMethod(1)
   }
 
 
@@ -77,17 +77,11 @@ function App() {
         <div id="box" className='transition ease-in-out delay-150 '>
           <div className='overlay-container rounded-xl p-7 pb-9'>
               
-              {/* Options */}
-              { paymentMethod == 0 &&<div className=''>
-                Select a payment option <span className='float-right' onClick={() => closeOverlay()}>X</span>
-                <div onClick={() => setpaymentMethod(1)} className='mt-6 pl-5 border rounded pt-3 pb-3 hover:transition ease-in-out delay-150 hover:border-blue-500'> <i className="fa fa-credit-card mr-5"></i> Pay with card</div>
-                <div onClick={() => setpaymentMethod(2)} className='mt-4 pl-5 border rounded pt-3 pb-3 hover:transition ease-in-out delay-150 hover:border-blue-500'> <i className="fa fa-mobile-phone mr-5 text-xl"></i> Pay with Mobile bank</div>
-              </div>
-              }
+      
 
               {/* If paymentMethod is card  */}
             { paymentMethod == 1 &&<div className=''>
-            Fancy Shoe payment <span className='float-right hover:underline' onClick={() => setpaymentMethod(0)}>Go back</span>
+            Fancy Shoe payment <span className='float-right hover:underline' onClick={() => closeOverlay()}>X</span>
 
             <div onClick={() => setpaymentMethod(2)} className='mt-10 mb-5 pl-5 border rounded pt-3 pb-3 hover:transition ease-in-out delay-150 hover:border-blue-500'> <i className="fa fa-mobile-phone mr-5 text-xl"></i> Pay with Mobile bank</div>
 
@@ -143,7 +137,7 @@ function App() {
             { paymentMethod == 2 &&
                 <div className=''>
 
-                  <i className="fa fa-mobile-phone text-xl mr-5"></i> Pay with Mobile bank <span className='float-right hover:underline' onClick={() => setpaymentMethod(0)}>Go back</span>
+                  <i className="fa fa-mobile-phone text-xl mr-5"></i> Pay with Mobile bank <span className='float-right hover:underline' onClick={() => setpaymentMethod(1)}>Go back</span>
 
                   <div className="card-form grid grid-cols-2 gap-4 pt-7 ">
 
