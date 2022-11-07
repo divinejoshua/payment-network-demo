@@ -83,6 +83,14 @@ function App() {
             { paymentMethod == 1 &&<div className=''>
             Fancy Shoe payment <span className='float-right hover:underline' onClick={() => closeOverlay()}>X</span>
 
+
+          <div className='or-div'>
+            <div className='or-span mx-auto'>
+              OR
+            </div>
+          </div>
+
+
             <div onClick={() => setpaymentMethod(2)} className='mt-10 mb-5 pl-5 border rounded pt-3 pb-3 hover:transition ease-in-out delay-150 hover:border-blue-500'> <i className="fa fa-mobile-phone mr-5 text-xl"></i> Pay with Mobile bank</div>
 
 
