@@ -150,7 +150,7 @@ function App() {
             { paymentMethod == 2 &&
                 <div className=''>
 
-                  <i className="fa fa-mobile-phone text-xl mr-5"></i> Pay with Mobile bank <span className='float-right hover:underline' onClick={() => setpaymentMethod(1)}>Go back</span>
+                  <i className="fa fa-arrow-left text-sm mr-3" onClick={() => setpaymentMethod(1)}></i> Pay with Mobile bank 
 
                   <div className="card-form grid grid-cols-2 gap-4 pt-7 ">
 
