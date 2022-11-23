@@ -13,6 +13,8 @@ function App() {
   const handleBankChange = event => {
     // setMessage(event.target.value);
     console.log('value is:', event.target.value);
+    window.open("https://www.w3schools.com");
+    
   };
 
 
@@ -170,11 +172,11 @@ function App() {
                               <select onChange={handleBankChange} className="block appearance-none w-full border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
                                 <option>-Select bank name</option>
                                 <option value="kuda">Kuda Bank</option>
-                                <option>Monzo Bank</option>
-                                <option>Revolut Bank</option>
-                                <option>Wema Bank</option>
-                                <option>UBA Bank</option>
-                                <option>Zenith Bank</option>
+                                <option value="monzo">Monzo Bank</option>
+                                <option value="revolut">Revolut Bank</option>
+                                <option value="wema">Wema Bank</option>
+                                <option value="uba">UBA Bank</option>
+                                <option value="zenith">Zenith Bank</option>
                               </select>
                               <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                                 <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
