@@ -13,8 +13,8 @@ function App() {
   const handleBankChange = event => {
     // setMessage(event.target.value);
     console.log('value is:', event.target.value);
-    window.open("https://www.w3schools.com");
-    
+    window.open("instagram://user?username=divine.er");
+
   };
 
 
