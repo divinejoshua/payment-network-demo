@@ -9,6 +9,13 @@ function App() {
   // overlay 
   const [paymentMethod, setpaymentMethod] = useState(1);
 
+
+  const handleBankChange = event => {
+    // setMessage(event.target.value);
+    console.log('value is:', event.target.value);
+  };
+
+
   // on click on buy button 
   const buyButton = () => {
     document.getElementById("overlay").style.display = "block";
@@ -160,9 +167,9 @@ function App() {
                               Bank Name
                             </label>
                             <div className="relative">
-                              <select className="block appearance-none w-full border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                              <select onChange={handleBankChange} className="block appearance-none w-full border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
                                 <option>-Select bank name</option>
-                                <option>Kuda Bank</option>
+                                <option value="kuda">Kuda Bank</option>
                                 <option>Monzo Bank</option>
                                 <option>Revolut Bank</option>
                                 <option>Wema Bank</option>
