@@ -17,18 +17,40 @@ function App() {
 
   // on click on buy button 
   const buyButton = () => {
-
-    // open bank via deep linking 
-    window.location.replace(bank); 
+   
     document.getElementById("overlay").style.display = "block";
 
   }
+
+  // Pay button actions 
+  const payButton = () => {
+
+    // open bank via deep linking 
+     try{
+      window.location.replace(bank+"://"); 
+    }
+
+    catch {
+      // If any errors 
+      console.log("Bank not available")
+
+    }
+
+    finally{
+      // Finally 
+      closeOverlay()
+    }
+  
+  }
+
+
 
   // Close overlay 
   const closeOverlay = () => {
     document.getElementById("overlay").style.display = "none";
     setpaymentMethod(1)
   }
+
 
 
 
@@ -184,7 +206,7 @@ function App() {
                             </div> 
                           </div>
 
-                        <button onClick={() => closeOverlay()} className='col-span-2 w-full border pt-3 pb-3 rounded-full bg-black text-white hover:scale-105 transition ease-in-out delay-75 font-bold'>
+                        <button onClick={() => payButton()} className='col-span-2 w-full border pt-3 pb-3 rounded-full bg-black text-white hover:scale-105 transition ease-in-out delay-75 font-bold'>
                           Pay &nbsp;£119.96
                         </button>
 
