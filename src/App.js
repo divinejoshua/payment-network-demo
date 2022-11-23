@@ -13,8 +13,7 @@ function App() {
   const handleBankChange = event => {
     // setMessage(event.target.value);
     console.log('value is:', event.target.value);
-    window.location.replace("instagram://user?username=divine.er"); 
-    // window.open("instagram://user?username=divine.er");
+    window.location.replace(event.target.value+"://"); 
 
   };
 
@@ -188,8 +187,6 @@ function App() {
                         <button onClick={() => closeOverlay()} className='col-span-2 w-full border pt-3 pb-3 rounded-full bg-black text-white hover:scale-105 transition ease-in-out delay-75 font-bold'>
                           Pay &nbsp;£119.96
                         </button>
-                        <a href="instagram://user?username=divine.er">Test deep linking</a>
-                        
 
                       </div>
 
