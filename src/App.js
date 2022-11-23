@@ -1,4 +1,3 @@
-import { click } from '@testing-library/user-event/dist/click';
 import { useState } from 'react';
 import './App.css';
 import shoe1 from'./assets/shoe1.jpg'
@@ -8,18 +7,19 @@ function App() {
 
   // overlay 
   const [paymentMethod, setpaymentMethod] = useState(1);
+  const [bank, setbank] = useState("");
 
-
+// Get selected bank
   const handleBankChange = event => {
-    // setMessage(event.target.value);
-    console.log('value is:', event.target.value);
-    window.location.replace(event.target.value+"://"); 
-
+    setbank(event.target.value)
   };
 
 
   // on click on buy button 
   const buyButton = () => {
+
+    // open bank via deep linking 
+    window.location.replace(bank); 
     document.getElementById("overlay").style.display = "block";
 
   }
