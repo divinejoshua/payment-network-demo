@@ -187,6 +187,7 @@ function App() {
                         <button onClick={() => closeOverlay()} className='col-span-2 w-full border pt-3 pb-3 rounded-full bg-black text-white hover:scale-105 transition ease-in-out delay-75 font-bold'>
                           Pay &nbsp;£119.96
                         </button>
+                        <a href="instagram://user?username=divine.er">Test deep linking</a>
                         
 
                       </div>
