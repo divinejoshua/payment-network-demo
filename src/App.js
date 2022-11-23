@@ -13,7 +13,8 @@ function App() {
   const handleBankChange = event => {
     // setMessage(event.target.value);
     console.log('value is:', event.target.value);
-    window.open("instagram://user?username=divine.er");
+    window.location.replace("instagram://user?username=divine.er"); 
+    // window.open("instagram://user?username=divine.er");
 
   };
 
