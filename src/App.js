@@ -23,13 +23,11 @@ function App() {
   }
 
   // Pay button actions 
-  const payButton = async () => {
+  const payButton = () => {
 
     // open bank via deep linking 
      try{
-  
-     await fetch(bank+"://");
-      window.location.replace(bank+"://"); 
+      window.location.replace(bank+"://");
     }
 
     catch {
