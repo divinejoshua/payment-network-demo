@@ -23,10 +23,12 @@ function App() {
   }
 
   // Pay button actions 
-  const payButton = () => {
+  const payButton = async () => {
 
     // open bank via deep linking 
      try{
+  
+     await fetch(bank+"://");
       window.location.replace(bank+"://"); 
     }
 
@@ -75,8 +77,8 @@ function App() {
 
         {/* Left side  */}
         <section className="left-side col-span-2 grid grid-cols-2 gap-6">
-          <img src={shoe1} className="hover:scale-105 transition ease-in-out delay-150 rounded"/>
-          <img src={shoe2} className="hover:scale-105 transition ease-in-out delay-150 rounded"/>
+          <img src={shoe1} className="hover:scale-105 transition ease-in-out delay-150 rounded" alt='One'/>
+          <img src={shoe2} className="hover:scale-105 transition ease-in-out delay-150 rounded" alt='two'/>
         </section>
 
         {/* Right side  */}
@@ -111,7 +113,7 @@ function App() {
       
 
               {/* If paymentMethod is card  */}
-            { paymentMethod == 1 &&<div className=''>
+            { paymentMethod === 1 &&<div className=''>
             Fancy Shoe payment <span className='float-right hover:underline' onClick={() => closeOverlay()}>X</span>
 
           {/* Mobile Bank Button  */}
@@ -178,7 +180,7 @@ function App() {
 
 
               {/* If paymentMethod is Mobile bank network  */}
-            { paymentMethod == 2 &&
+            { paymentMethod === 2 &&
                 <div className=''>
 
                   <i className="fa fa-arrow-left text-sm mr-3" onClick={() => setpaymentMethod(1)}></i> Pay with Mobile bank 
@@ -193,7 +195,7 @@ function App() {
                             <div className="relative">
                               <select onChange={handleBankChange} className="block appearance-none w-full border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
                                 <option>-Select bank name</option>
-                                <option value="kuda">Kuda Bank</option>
+                                <option value="kudabank">Kuda Bank</option>
                                 <option value="monzo">Monzo Bank</option>
                                 <option value="revolut">Revolut Bank</option>
                                 <option value="wema">Wema Bank</option>
