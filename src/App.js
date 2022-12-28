@@ -83,7 +83,7 @@ function App() {
         <section className="right-side">
           <h1 className='text-2xl font-bold mb-4'>Nike Air Zoom Pegasus 39 Shield</h1>
           <p className='mb-4'>Women's Weatherised Road Running Shoes</p>
-          £119.96
+          £223.96
 
           {/* Sizes  */}
           <div className="grid grid-cols-3 lg:grid-cols-4 gap-4 mt-10 place-content-center cursor-pointer">
@@ -166,7 +166,7 @@ function App() {
                       </div>
 
                     <button onClick={() => closeOverlay()} className='mt-5 col-span-2 w-full border pt-3 pb-3 rounded-full bg-black text-white hover:scale-105 transition ease-in-out delay-75 font-bold'>
-                      Pay &nbsp;£119.96
+                      Pay &nbsp;223.96
                     </button>
                     
 
@@ -207,7 +207,7 @@ function App() {
                           </div>
 
                         <button onClick={() => payButton()} className='col-span-2 w-full border pt-3 pb-3 rounded-full bg-black text-white hover:scale-105 transition ease-in-out delay-75 font-bold'>
-                          Pay &nbsp;£119.96
+                          Pay &nbsp;223.96
                         </button>
 
                       </div>
