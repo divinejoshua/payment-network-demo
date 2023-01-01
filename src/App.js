@@ -59,7 +59,7 @@ function App() {
     <div className="App mb-20">
 
       {/* Header  */}
-      <header className="App-header grid grid-cols-3 gap-8 pt-8 pb-5 container mx-auto mb-5 border-b border-gray-100  pl-5 pr-5">
+      <header className="App-header grid grid-cols-3 gap-8 pt-8 pb-5 container mx-auto mb-5 border-b border-gray-100  pl-5 pr-5 fixed top-0 sm:relative bg-white">
       <h1 className='font-bold col-span-2'>Fancy Shoes</h1>
 
         <ul className='flex cursor-pointer hidden sm:flex'>
@@ -71,7 +71,7 @@ function App() {
       </header>
 
     {/* Main body  */}
-      <main className='md:grid md:grid-cols-3 md:gap-8 container mx-auto mt-8  pl-5 pr-5'>
+      <main className='md:grid md:grid-cols-3 md:gap-8 container mx-auto mt-24 sm:mt-8  pl-5 pr-5'>
 
         {/* Left side  */}
         <section className="left-side col-span-2 grid grid-cols-2 gap-6">
