@@ -38,7 +38,7 @@ function App() {
 
     finally{
       // Finally 
-      closeOverlay()
+      closeOverlay() 
     }
   
   }
