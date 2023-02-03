@@ -7,7 +7,7 @@ function App() {
 
   // overlay 
   const [paymentMethod, setpaymentMethod] = useState(1);
-  const [bank, setbank] = useState("");
+  const [bank, setbank] = useState(""); 
 
 // Get selected bank
   const handleBankChange = event => {
