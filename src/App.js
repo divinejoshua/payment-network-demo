@@ -6,7 +6,7 @@ import shoe2 from'./assets/shoe2.jpg'
 function App() {
 
   // overlay 
-  const [paymentMethod, setpaymentMethod] = useState(1);
+  const [paymentMethod, setpaymentMethod] = useState(1); 
   const [bank, setbank] = useState(""); 
 
 // Get selected bank
