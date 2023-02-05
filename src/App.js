@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import shoe1 from'./assets/shoe1.jpg'
-import shoe2 from'./assets/shoe2.jpg'
+import shoe2 from'./assets/shoe2.jpg'  
 
 function App() {
 
