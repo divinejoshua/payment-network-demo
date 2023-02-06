@@ -3,7 +3,7 @@ import './App.css';
 import shoe1 from'./assets/shoe1.jpg'
 import shoe2 from'./assets/shoe2.jpg'  
 
-function App() {
+function App() {  
 
   // overlay 
   const [paymentMethod, setpaymentMethod] = useState(1); 
