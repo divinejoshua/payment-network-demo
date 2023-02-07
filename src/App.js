@@ -11,7 +11,7 @@ function App() {
 
 // Get selected bank
   const handleBankChange = event => {
-    setbank(event.target.value)
+    setbank(event.target.value) 
   };
 
 
